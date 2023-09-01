@@ -1,11 +1,3 @@
-<script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="Hi Hi, You did it!" />
-    </div>
-  </header>
+  <h1>Hello Vue</h1>
 </template>
