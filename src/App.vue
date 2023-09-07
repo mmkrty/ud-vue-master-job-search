@@ -1,3 +1,12 @@
 <template>
-  <h1 class="m-4 text-center text-6xl font-semibold">Hello Vue</h1>
+  <MainNav />
 </template>
+
+<script>
+import MainNav from "@/components/MainNav.vue";
+
+export default {
+  name: "App",
+  components: { MainNav },
+};
+</script>
