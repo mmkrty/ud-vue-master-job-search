@@ -4,9 +4,10 @@
       <div
         class="border-brand-gray-1 mx-auto flex h-full flex-nowrap border-b border-solid px-8"
       >
-        <a href="/" class="flex h-full items-center text-xl font-semibold"
-          >Hao Careers</a
-        >
+        <a href="/" class="flex h-full items-center text-xl font-semibold">{{
+          company
+        }}</a>
+        <h2 class="ml-8 flex h-full items-center">Developed by {{ author }}</h2>
       </div>
     </div>
   </header>
@@ -15,5 +16,11 @@
 <script>
 export default {
   name: "MainNav",
+  data() {
+    return {
+      company: "Hao Careers",
+      author: "Hao Chen",
+    };
+  },
 };
 </script>
