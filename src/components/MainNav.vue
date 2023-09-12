@@ -4,7 +4,7 @@
       <div
         class="border-brand-gray-1 mx-auto flex h-full flex-nowrap border-b border-solid px-8"
       >
-        <a href="/" class="flex h-full items-center text-xl font-semibold">{{
+        <a :href="url" class="flex h-full items-center text-xl font-semibold">{{
           company
         }}</a>
       </div>
@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       company: "Hao Careers",
+      url: "https://careers.google.com",
     };
   },
 };
