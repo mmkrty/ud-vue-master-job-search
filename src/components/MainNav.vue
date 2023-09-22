@@ -2,7 +2,7 @@
   <header class="w-full text-sm">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div
-        class="border-brand-gray-1 mx-auto flex h-full flex-nowrap border-b border-solid px-8"
+        class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
         <a :href="url" class="flex h-full items-center text-xl font-semibold">{{
           company
@@ -10,31 +10,14 @@
 
         <nav class="ml-12 h-full font-semibold">
           <ul class="flex h-full list-none">
-            <li class="h-full">
-              <a href="/" class="flex h-full items-center py-2.5">Teams</a>
-            </li>
-            <li class="ml-9 h-full">
-              <a href="/" class="flex h-full items-center py-2.5">Location</a>
-            </li>
-
-            <li class="ml-9 h-full">
-              <a href="/" class="flex h-full items-center py-2.5"
-                >Life at Hao Corp</a
-              >
-            </li>
-
-            <li class="ml-9 h-full">
-              <a href="/" class="flex h-full items-center py-2.5"
-                >How we hire</a
-              >
-            </li>
-
-            <li class="ml-9 h-full">
-              <a href="/" class="flex h-full items-center py-2.5">Students</a>
-            </li>
-
-            <li class="ml-9 h-full">
-              <a href="/" class="flex h-full items-center py-2.5">Jobs</a>
+            <li
+              v-for="menuItem in menuItems"
+              :key="menuItem"
+              class="ml-9 h-full"
+            >
+              <a href="/" class="flex h-full items-center py-2.5">{{
+                menuItem
+              }}</a>
             </li>
           </ul>
         </nav>
@@ -50,6 +33,14 @@ export default {
     return {
       company: "Hao Careers",
       url: "https://careers.google.com",
+      menuItems: [
+        "Teams",
+        "Locations",
+        "Life at Hao Corp",
+        "How we hire",
+        "Students",
+        "Jobs",
+      ],
     };
   },
 };
