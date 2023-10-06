@@ -1,5 +1,8 @@
 <template>
-  <img class="h-8 w-8 rounded-3xl object-contain shadow-md" :src="imageLink" />
+  <img
+    class="hover:shadow-blue h-8 w-8 rounded-3xl object-contain shadow-md"
+    :src="imageLink"
+  />
 </template>
 
 <script>

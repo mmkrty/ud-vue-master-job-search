@@ -23,8 +23,8 @@
         </nav>
 
         <div class="ml-auto flex h-full items-center">
-          <action-button v-if="!isLoggedIn" />
-          <profile-image v-else />
+          <action-button v-if="!isLoggedIn" @click="loginUser" />
+          <profile-image v-else class="cursor-pointer" @click="logoutUser" />
         </div>
       </div>
     </div>
@@ -55,6 +55,14 @@ export default {
       ],
       isLoggedIn: false,
     };
+  },
+  methods: {
+    loginUser() {
+      this.isLoggedIn = true;
+    },
+    logoutUser() {
+      this.isLoggedIn = false;
+    },
   },
 };
 </script>
