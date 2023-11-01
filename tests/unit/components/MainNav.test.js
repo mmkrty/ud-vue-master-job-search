@@ -25,4 +25,16 @@ describe("MainNav", () => {
       "Jobs",
     ]);
   });
+
+  describe("when the user logs in", () => {
+    it("displays user profile picture", () => {
+      render(MainNav);
+
+      const profileImage = screen.queryByRole("img", {
+        name: "profile image",
+      });
+
+      expect(profileImage).not.toBeInTheDocument();
+    });
+  });
 });
