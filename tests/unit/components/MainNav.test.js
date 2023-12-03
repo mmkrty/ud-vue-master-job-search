@@ -31,7 +31,7 @@ describe("MainNav", () => {
       render(MainNav);
 
       const profileImage = screen.queryByRole("img", {
-        name: "profile image",
+        name: /profile image/i,
       });
 
       expect(profileImage).not.toBeInTheDocument();
