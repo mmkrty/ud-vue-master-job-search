@@ -23,8 +23,8 @@
         </nav>
 
         <div class="ml-auto flex h-full items-center">
-          <action-button v-if="!isLoggedIn" @click="loginUser" />
-          <profile-image v-else class="cursor-pointer" @click="logoutUser" />
+          <action-button v-if="!isLoggedIn" text="Login" @click="loginUser" />
+          <profile-image v-else @click="logoutUser" />
         </div>
       </div>
     </div>
