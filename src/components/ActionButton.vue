@@ -1,8 +1,5 @@
 <template>
-  <button
-    class="rounded border-0 bg-brand-blue-1 px-5 py-3 font-semibold text-white hover:shadow-blue"
-    @click="handleClick"
-  >
+  <button :class="buttonClass">
     {{ text }}
   </button>
 </template>
@@ -11,10 +8,30 @@
 export default {
   name: "ActionButton",
   props: ["text"],
-  methods: {
-    handleClick(event) {
-      console.log(event);
+  data() {
+    return {
+      primary: true,
+    };
+  },
+  computed: {
+    buttonClass() {
+      return {
+        primary: this.primary,
+      };
     },
   },
 };
 </script>
+
+<style scoped>
+button {
+  @apply rounded px-5 py-3 font-semibold;
+}
+
+.primary {
+  @apply border-0 bg-brand-blue-1 text-white hover:shadow-blue;
+}
+
+.secondary {
+}
+</style>
