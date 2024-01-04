@@ -26,7 +26,7 @@
           <action-button
             v-if="!isLoggedIn"
             text="Login"
-            :is-primary="true"
+            type="primary"
             @click="loginUser"
           />
           <profile-image v-else @click="logoutUser" />
