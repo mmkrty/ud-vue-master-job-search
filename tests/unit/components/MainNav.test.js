@@ -4,7 +4,7 @@ import MainNav from "@/components/MainNav.vue";
 import { describe, expect, it } from "vitest";
 
 describe("MainNav", () => {
-  it("displays company name", () => {
+  const renderMainNav = () => {
     render(MainNav, {
       global: {
         stubs: {
@@ -12,18 +12,16 @@ describe("MainNav", () => {
         },
       },
     });
+  };
+
+  it("displays company name", () => {
+    renderMainNav();
     const companyName = screen.getByText("Hao Careers");
     expect(companyName).toBeInTheDocument();
   });
 
   it("displays menu items for navigation", () => {
-    render(MainNav, {
-      global: {
-        stubs: {
-          FontAwesomeIcon: true,
-        },
-      },
-    });
+    renderMainNav();
     const navigationMenuItems = screen.getAllByRole("listitem");
     const navigationMenuTexts = navigationMenuItems.map(
       (item) => item.textContent,
@@ -40,13 +38,7 @@ describe("MainNav", () => {
 
   describe("when the user logs in", () => {
     it("displays user profile picture", async () => {
-      render(MainNav, {
-        global: {
-          stubs: {
-            FontAwesomeIcon: true,
-          },
-        },
-      });
+      renderMainNav();
 
       let profileImage = screen.queryByRole("img", {
         name: /profile image/i,
