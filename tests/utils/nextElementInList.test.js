@@ -1,5 +1,5 @@
 import { describe, expect } from "vitest";
-import nextElementInList from "../../src/utils/nextElemenyInList";
+import nextElementInList from "../../src/utils/nextElementInList";
 
 describe("nextElementInList", () => {
   it("locates elements in list and returns the next element in list", () => {
