@@ -38,4 +38,17 @@ describe("TheHeadLine", () => {
     expect(actionPhrase).toBeInTheDocument();
     vi.useRealTimers();
   });
+
+  it("removes interval when component is unmounted", () => {
+    vi.useFakeTimers();
+    const clearInterval = vi.fn();
+    vi.stubGlobal("clearInterval", clearInterval);
+
+    const { unmount } = render(TheHeadline);
+    unmount();
+
+    expect(clearInterval).toHaveBeenCalled();
+    vi.useRealTimers();
+    vi.unstubAllGlobals();
+  });
 });
