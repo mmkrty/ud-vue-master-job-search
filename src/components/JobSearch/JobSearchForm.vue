@@ -8,6 +8,7 @@
         <label class="absolute -top-10 left-0">Role</label>
         <text-input
           placeholder="Software engineer"
+          :value="role"
           @handle-input="role = $event"
         />
       </div>
@@ -20,6 +21,7 @@
         <label class="absolute -top-10 left-0">Where?</label>
         <text-input
           placeholder="Los Angeles"
+          :value="location"
           @handle-input="location = $event"
         />
       </div>
