@@ -4,9 +4,11 @@
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
-        <a :href="url" class="flex h-full items-center text-xl font-semibold">{{
-          company
-        }}</a>
+        <router-link
+          :to="{ name: 'Home' }"
+          class="flex h-full items-center text-xl font-semibold"
+          >Hao Careers</router-link
+        >
 
         <nav class="ml-12 h-full font-semibold">
           <ul class="flex h-full list-none">
@@ -52,8 +54,6 @@ export default {
   },
   data() {
     return {
-      company: "Hao Careers",
-      url: "https://careers.google.com",
       menuItems: [
         "Teams",
         "Locations",
