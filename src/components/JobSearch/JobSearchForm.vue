@@ -6,8 +6,8 @@
     <font-awesome-icon :icon="['fas', 'search']" class="ml-4 mr-3" />
     <div class="flex h-full flex-1 flex-nowrap text-base font-light">
       <div class="relative flex h-full flex-1 items-center pr-3">
-        <label class="absolute -top-10 left-0">Role</label>
-        <text-input v-model="role" placeholder="Software engineer" />
+        <label for="role" class="absolute -top-10 left-0">Role</label>
+        <text-input id="role" v-model="role" placeholder="Software engineer" />
       </div>
       <span
         class="flex h-full items-center border-l border-r border-brand-gray-3 bg-brand-gray-2 px-3"
